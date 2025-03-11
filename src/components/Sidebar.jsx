@@ -1,4 +1,5 @@
 import { X } from "lucide-react"
+import { Link } from "react-router-dom"
 import "./header.css";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
@@ -14,7 +15,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <X size={24} />
       </button>
       <nav className="mt-16 space-y-4 px-4">
-        <a href="#home" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
+        <a href="/" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
           Home
         </a>
         <a href="#about" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
@@ -23,12 +24,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <a href="#services" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
           Services
         </a>
-        <a href="#testimonials" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
-          Testimonials
-        </a>
         <a href="#contact" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
           Contact
         </a>
+        <Link to="/Login" className="block py-2 hover:bg-blue-700 rounded transition-colors duration-200">
+          Login 
+        </Link>
       </nav>
     </div>
   )

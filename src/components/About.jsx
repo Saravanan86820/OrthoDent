@@ -28,12 +28,12 @@ const About = () => {
               <p>Committed to excellence in dental services</p>
             </div>
             <div className="bg-blue-100 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
-              <Clock className="mx-auto text-blue-600 mb-2" size={32} />
+              {/* <Clock className="mx-auto text-blue-600 mb-2" size={32} /> */}
               <h3 className="font-semibold text-xl mb-2">Convenient Hours</h3>
               <p>Flexible scheduling to fit your busy life</p>
             </div>
             <div className="bg-blue-100 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
-              <img src="/tooth-icon.svg" alt="Modern Technology" className="mx-auto h-8 w-8 text-blue-600 mb-2" />
+              {/* <img src="/tooth-icon.svg" alt="Modern Technology" className="mx-auto h-8 w-8 text-blue-600 mb-2" /> */}
               <h3 className="font-semibold text-xl mb-2">Modern Technology</h3>
               <p>State-of-the-art equipment for the best results</p>
             </div>
