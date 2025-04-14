@@ -1,5 +1,5 @@
 import { Menu } from "lucide-react"
-import logo from "../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.jpg";
 import "./header.css";
 
 const Header = ({ toggleSidebar }) => {

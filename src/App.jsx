@@ -1,48 +1,53 @@
 "use client"
 
-import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
-import Sidebar from "./components/Sidebar"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Services from "./components/Services"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Upload_Users from './components/upload-users';
-import Login from './components/Login';
-import Register from './components/Register';
 
+import Home from "./pages/Home"
+
+import StudentRegister from './components/StudentRegister';
+import Upload_Users from './components/upload-users';
+import FacultyRegister from './components/FacultyRegister';
+
+import FacultyLogin from "./components/FacultyLogin";
+import AppointmentSearch from "./components/AppointmentSearch";
+
+import Login from './components/StudentLogin';
+import ResetPassword from './components/ResetPassword';
+
+//Student Dashboard
+import Dashboard from './pages/Dashboard';
+//Faculty Dashboard
+import FacultyDashboard from './pages/FacultyDashboard';
+
+// import ProtectedRoute from './components/ProtectedRoute';
+
+import StudentManagement from "./components/StudentList";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
 
   return (
-    <div className="relative min-h-screen bg-gray-100">
-      <Header toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <Routes>
-          <Route
-            path="/"
-            element={
-              <main className="pt-16 transition-all duration-300 ease-in-out">
-                <Hero />
-                <About />
-                <Services />
-                <Contact />
-              </main>
-            }
-          />
+
+          <Route path="/" element={<Home />} />
+
+          <Route path="/facultyregister" element={<FacultyRegister />} />
+          <Route path="/studentregister" element={<StudentRegister />} />
           <Route path="/users" element={<Upload_Users />} />
+
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/facultylogin" element={<FacultyLogin />} />
+
+          <Route path="/appointmentsearch" element={<AppointmentSearch />} />
+          {/* <Route path="/students" element={<StudentList />} /> */}
+          {/* <Route path="/edit-student" element={<EditStudents />} /> */}
+
+        <Route path="/dashboard"  element={ <Dashboard />} />
+        <Route path="/facultydashboard"  element={ <FacultyDashboard />} />
+        <Route path="/studentmanagement"  element={ <StudentManagement />} />
+        {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
         </Routes>
-      <Footer />
-    </div>
   )
 }
 
