@@ -120,6 +120,7 @@ OrthoDent/
 │   └── App.js        # Entry point
 └── README.md
 
+
 ## API Endpoints
 
 | Method | Endpoint        | Description           |
