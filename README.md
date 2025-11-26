@@ -106,20 +106,32 @@ Follow these steps to set up the project locally:
 
 
 ## Folder Structure
-
+```
 OrthoDent/
-├── backend/          # Node.js & Express server
-│   ├── controllers/  # Business logic
-│   ├── models/       # Mongoose models
-│   ├── routes/       # API endpoints
-│   └── server.js     # Entry point
-├── frontend/         # React.js client
-│   ├── components/   # React components
-│   ├── pages/        # Page components
-│   ├── services/     # API calls
-│   └── App.js        # Entry point
-└── README.md
-
+├── backend/ # Node.js & Express server
+│ ├── config/ # Configuration files (DB connection, env variables)
+│ ├── controllers/ # Request handling logic
+│ ├── middlewares/ # Middleware functions (auth, error handling)
+│ ├── models/ # Mongoose schemas/models
+│ ├── routes/ # API route definitions
+│ ├── utils/ # Utility/helper functions
+│ ├── server.js # Entry point for the backend
+│ └── package.json # Backend dependencies
+│
+├── frontend/ # React.js client
+│ ├── public/ # Public assets (index.html, favicon)
+│ ├── src/ # Source code
+│ │ ├── components/ # Reusable React components
+│ │ ├── pages/ # Page-level components
+│ │ ├── services/ # API calls and data services
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── App.js # Main App component
+│ │ └── index.js # Entry point for React
+│ └── package.json # Frontend dependencies
+│
+├── README.md # Project documentation
+└── .gitignore # Git ignore rules
+```
 
 ## API Endpoints
 
