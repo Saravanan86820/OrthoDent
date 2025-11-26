@@ -1,6 +1,20 @@
 # OrthoDent
 
+![Project Status](https://img.shields.io/badge/status-Completed-green) ![Technologies](https://img.shields.io/badge/Technologies-MERN-blue)
+
 **OrthoDent** is a web-based clinical and academic management platform developed for the Department of Orthodontics at **MGPGIDS (Govt. of Puducherry)**. It replaces manual record-keeping with a secure, efficient, and collaborative digital system.
+
+---
+
+## Table of Contents
+- [Project Duration](#project-duration)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Project Highlights](#project-highlights)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Folder Structure](#folder-structure)
+- [API Endpoints](#api-endpoints)
 
 ---
 
@@ -51,8 +65,69 @@
 
 ---
 
+## Screenshots
+*Add screenshots of your project here for better visualization.*  
+
+![Dashboard Example](path/to/dashboard.png)  
+![Patient Case Management](path/to/patient-case.png)  
+![Attendance Module](path/to/attendance.png)  
+
+---
+
 ## Installation
 
-1. Clone the repository:  
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**  
    ```bash
    git clone <repository-url>
+
+2. **Backend Setup:**
+   ```
+   cd backend
+   npm install
+   npm start
+
+3. **Frontend Setup:**
+   ```
+   cd ../frontend
+   npm install
+   npm start
+
+4. **Environment Variables:**
+   ```
+   PORT=5000
+   MONGO_URI=<your-mongodb-connection-string>
+   JWT_SECRET=<your-secret-key>
+
+5. **Open your browser and visit:**
+   ```
+   http://localhost:3000
+
+
+## Folder Structure
+
+OrthoDent/
+├── backend/          # Node.js & Express server
+│   ├── controllers/  # Business logic
+│   ├── models/       # Mongoose models
+│   ├── routes/       # API endpoints
+│   └── server.js     # Entry point
+├── frontend/         # React.js client
+│   ├── components/   # React components
+│   ├── pages/        # Page components
+│   ├── services/     # API calls
+│   └── App.js        # Entry point
+└── README.md
+
+## API Endpoints
+
+| Method | Endpoint        | Description           |
+| ------ | --------------- | --------------------- |
+| GET    | /api/students   | Get all students      |
+| POST   | /api/students   | Add new student       |
+| GET    | /api/patients   | Get patient details   |
+| POST   | /api/patients   | Add new patient case  |
+| GET    | /api/attendance | Fetch attendance data |
+| POST   | /api/attendance | Record attendance     |
+
